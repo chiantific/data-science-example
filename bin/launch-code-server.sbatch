@@ -1,12 +1,11 @@
 #!/bin/bash --login
 #SBATCH --time=2:00:00
 #SBATCH --nodes=1
-#SBATCH --gpus-per-node=v100:1
-#SBATCH --cpus-per-gpu=6  
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12  
 #SBATCH --mem=64G
-#SBATCH --partition=debug 
+#SBATCH --partition=batch
 #SBATCH --job-name=launch-code-server
-#SBATCH --mail-type=ALL
 #SBATCH --output=bin/%x-%j-slurm.out
 #SBATCH --error=bin/%x-%j-slurm.err
 
